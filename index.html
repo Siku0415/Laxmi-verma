@@ -17,15 +17,15 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init', '1904936050902030');
-fbq('track', 'PageView'); 
-fbq('track', 'Subscribe'); 
+fbq('track', 'PageView');
+fbq('track', 'Subscribe');
 </script>
 
 <noscript>
   <img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=1904936050902030&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- End Pixel -->
 
 <style>
   body {
@@ -60,6 +60,20 @@ fbq('track', 'Subscribe');
     font-size: 0.95rem;
     margin-top: -5px;
   }
+  .btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
   ul {
     list-style: none;
     text-align: left;
@@ -81,36 +95,49 @@ fbq('track', 'Subscribe');
 </head>
 <body>
 
-<div class="card">
-  <div class="profile">
-    <img src="logo.jpg" alt="Profile Photo" />
+  <div class="card">
+    <div class="profile">
+      <img src="logo.jpg" alt="Profile Photo" />
+    </div>
+
+    <h2>lakshmi verma mentor</h2>
+    <p class="sub">Market Education • Chart Insights • Learning Community</p>
+
+    <!-- Join Button -->
+    <a href="#" class="btn" id="joinBtn">Join Telegram</a>
+
+    <h3 style="color:red; margin-top:25px;">What You Get Inside</h3>
+    <ul>
+      <li>📚 Educational market insights</li>
+      <li>📈 Chart breakdowns & explanations</li>
+      <li>📝 Learning discussions</li>
+      <li>💬 Community interaction</li>
+    </ul>
+
+    <p class="note">
+      ⚠️ <b>Disclaimer:</b>
+      This community is for education only.
+      No financial advice, signals or earning guarantees.
+    </p>
   </div>
 
-  <h2>lakshmi verma mentor</h2>
-  <p class="sub">Market Education • Chart Insights • Learning Community</p>
-
-  <h3 style="color:red; margin-top:25px;">What You Get Inside</h3>
-  <ul>
-    <li>📚 Educational market insights</li>
-    <li>📈 Chart breakdowns & explanations</li>
-    <li>📝 Learning discussions</li>
-    <li>💬 Community interaction</li>
-  </ul>
-
-  <p class="note">
-    ⚠️ <b>Disclaimer:</b>
-    This community is for <b>education only</b>.
-    No financial advice, signals, accuracy claims or earning guarantees.
-  </p>
-</div>
-
-<!-- AUTO REDIRECT SCRIPT -->
+<!-- AUTO REDIRECT + BUTTON REDIRECT -->
 <script>
+const TG_LINK = "https://t.me/+QDKaNo33xh8zNWI1";
+
+// Auto redirect after 2 seconds
 window.onload = function () {
   setTimeout(() => {
-    window.location.href = "https://t.me/+QDKaNo33xh8zNWI1";
-  }, 2000); // 0.50 seconds
+    window.location.href = TG_LINK;
+  }, 2000);
 };
+
+// Button also redirects immediately
+document.getElementById("joinBtn").addEventListener("click", function(e) {
+  e.preventDefault();
+  fbq("track", "Subscribe");
+  window.location.href = TG_LINK;
+});
 </script>
 
 </body>
